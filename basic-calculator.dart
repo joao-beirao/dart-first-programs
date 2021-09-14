@@ -3,10 +3,10 @@ import 'dart:math';
 
 void main() {
   print("Insert Num1:");
-  String num1 = stdin.readLineSync().toString();
+  double num1 = double.parse(stdin.readLineSync().toString());
 
   print("Insert Num2:");
-  String num2 = stdin.readLineSync().toString();
+  double num2 = double.parse(stdin.readLineSync().toString());
 
   String operation;
 
@@ -18,13 +18,13 @@ void main() {
   double Res = 0;
 
   if (operation == "+") {
-    Res = double.parse(num1) + double.parse(num2);
+    Res = num1 + num2;
   } else if (operation == "-") {
-    Res = double.parse(num1) - double.parse(num2);
+    Res = num1 - num2;
   } else if (operation == "/") {
-    Res = double.parse(num1) / double.parse(num2);
+    Res = num1 / num2;
   } else if (operation == "*") {
-    Res = double.parse(num1) * double.parse(num2);
+    Res = num1 * num2;
   }
 
   print("Your result is: ${num1} ${operation} ${num2} = ${Res}");
